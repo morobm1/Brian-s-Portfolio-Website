@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brian Strider's Portfolio Contact</title>
+
+        <link rel="stylesheet" href="./css/Contact.css" />
+    </head>
+
+    <body>
+        <section class="tab">
+            <div class="tabs">
+                <a href="Home.html">Home</a>
+                <a href="About.html">About Me</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Resume.html">Resume</a>
+            </div>
+        </section>
+        
+        <main>
+            <section class="section-form">
+                <div class="container">
+                    <h1>Contact Me</h1>
+                    <p>I apperiate the time you are taking to review my portfolio website. If you wish to contact me please fill the following form. Once you submission is complete you will be forwarded to a conformation page.</p>
+                
+
+                    <form action="https://formspree.io/f/xnqrjadq" method="POST">
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" name="firstName" id="firstName" required class="form-element" placeholder="Michael"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input 
+                                type="text" 
+                                name="lastName" 
+                                id="lastName" 
+                                required 
+                                class="form-element" 
+                                placeholder="Smith"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required class="form-element" placeholder="Michael.Smith@example.com"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" name="company" id="company" class="form-element" placeholder="Please list the company that is requsting information"/>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="message">Please provide a brief description of your request or inquiry:</label>
+                            <textarea name="message" id="message" class="form-element" placeholder="I would like to inquire about..."></textarea>
+                        </div>
+
+                        <div class="submitForm">
+                            <input type="submit" value="Submit your inquiry"/>
+                        </div>
+                    </form>
+                </div>   
+            </section>    
+        </main>
+    </body>
+</html>
