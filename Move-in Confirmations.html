@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>NTX Move-in Confirmation</title>
+    <style>
+        * {
+            margin: auto;
+            padding: auto;
+            max-width: 600px;
+
+        }
+
+        body{
+            background: #ffffff;
+        }
+
+        .logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1, h2{
+            margin-top: 20px;
+            text-align: center;
+            color: rgb(202, 17, 17);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .moveindate {
+            text-align: center;
+            font-size: 45px;
+            color: #11774cd8;
+        }
+
+        p{
+            padding: 5px;
+            font-family: 'Fredoka One', cursive;
+            text-align: left;
+        }
+
+        .example {
+            font-weight: bold;
+            margin-left: 85px;
+        }
+
+        .unit_guide{
+            margin-right: auto;
+            display: block;
+        }
+
+        .portal {
+            margin-left: 350px;
+            padding: 5px;
+            border-radius: 30px;
+            color: white;
+            background-color: #2a6136;
+            text-decoration: none;
+            transition: 1s;
+        }
+
+        .portal:hover {
+            background-color: #2a613648;
+            color: black;
+        }
+
+        .hour{
+            display: block;
+            margin-right: 0;
+            padding: 0px;
+        }
+
+        .paymentSlider{
+            margin-top: 10px;
+            width: 600px;
+            height: 200px;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .slides{
+            width: 500%;
+            height: 200px;
+            display: flex;
+        }
+
+        .slides input{
+            display: none;
+        }
+
+        .paymentSlider{
+            width: 100%;
+            transition: 2s;
+        }
+
+        .slide img{
+            width:600px;
+            height: 200px;
+        }
+
+        .portal {
+            margin-right: 0;
+        }
+        /* manual navigation*/
+        .navigation-manual{
+            position: absolute;
+            width: 600px;
+            margin-top: 180px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-btn{
+            border: 2px solid #2a6136;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .manual-btn:not(:last-child){
+            margin-right: 40px;
+        }
+
+        .manual-btn:hover{
+            background: #042414;
+        }
+
+        #radio1:checked ~ .first{
+            margin-left: 0%;
+        }
+
+        #radio2:checked ~ .first{
+            margin-left: -200%;
+        }
+
+        #radio3:checked ~ .first{
+            margin-left: -100%;
+
+        }
+
+        .accordion{ 
+            background-color: #d1f0e06b;
+            padding: 15px;
+        }
+        .quest-page {
+            font-size: 20px;
+            color: rgb(2, 53, 53);
+            text-decoration: none;
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .arrow {
+            color:#2a6136;
+            float: right;
+            transition: 2s;
+        }
+
+        .arrow:hover {
+            color:aqua;
+        }
+
+        .quest-body {
+            max-height: 0;
+            overflow: hidden;
+            position: relative;
+            background-color:#30ad6f80;
+            transition: max-height 650ms;
+        }
+
+        .quest-body::before{
+            content: "";
+            position: absolute;
+            width: .6rem;
+            height: 90%;
+            background-color: #5ea5ce;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .quest-body p {
+            font-size: 14px;
+            margin-left: 15px;
+            color:#19221bb0;
+        }
+
+        .quest:target .quest-body {
+            max-height: 20rem;
+        }
+
+        .quest:target .quest-page .arrow {
+            display: none;
+        }
+        
+        .socialMedia{
+            text-align: right;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <img class="logo" src="https://ntxdenton.com/wp-content/uploads/2020/10/NTX-Logo-Color-Sticky-Header@2x-1.png" alt="Property Logo">
+    <h1>MOVE-IN GUIDE</h1>
+    <p>AN INFORMATIVE GUIDE TO EVERTHING YOU NEED TO KNOW ABOUT NTX!</p>
+    <P>FALL 2022 MOVE-IN</P>
+    <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c47c4062bdd0286655bbb7_Untitled%20design%20(13).png" alt="images of two employees">
+    <h1>MOVE-IN SCHEDULE</h1>
+    <p class="moveindate">AUGUST 18TH, 2022</p>
+
+    <h1>MOVE-IN GUIDE</h1>
+    <p>In order to ensure your move-in is as easy as possible, we have assigned time periods for each building and floor.</p>
+
+    <p>You must come in during your time slot! This will help the follow of move-in traffic. If you are unable to move-in on your preferred time please contact the office to inform us of an alternative time.</p>
+    <p><b>NTX HACKS:</b> Want to know where your unit is located:</p>
+    <p class="example">Example:</p>
+    <img class="unit_guide" src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c489c20c7a0719539cb28e_2%20-%20202%20-%20C.png" alt="Address example">
+    
+    <section class="payRentInstruction">
+        <h1 class="ResidentPortal">Resdient Portal</h1>
+        <p class="Instructions">There are so many benefits to your resident portal. This is where you can pay rent,receive updates and submit maintenance requests! If your contact information changes during your lease term, please make sure to update your profile here!</p>
+        <a class="portal" href="https://ntxnew.residentportal.com/auth">Click here for the Resident Portal</a>
+        <h2 class="PayRent">How Do I Pay Rent?</h2>
+        <p class="PayrentText">We accept payment by mail, in our leasing office, and online! Below are the different forms of payment we accept at NTX. Remember, we do not accept cash or partial payments</p>
+    </section>
+
+    <div class="paymentSlider">
+        <div class="slides">
+            <input type="radio" name="radio-button" id="radio1">
+            <input type="radio" name="radio-button" id="radio2">
+            <input type="radio" name="radio-button" id="radio3">
+
+            <div class="slide first">
+                <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c5d15a1d057e1fe8301224_Personal%20Check.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c5d15885dbcd691e31c465_Copy%20of%20Personal%20Check.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c5d15741c58187b3a1cea5_Copy%20of%20Copy%20of%20Personal%20Check.png" alt="">
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="moveInQuestion-container">
+            <div class="accordion">
+                <div class="quest" id="question1">
+                    <a class="quest-page" href="#question1">Why am I paying a full installment in August?
+                    <ion-icon class="arrow" name="caret-down-outline"></ion-icon>
+                    </a>
+                    <div class="quest-body">
+                        <p>Your lease is based on a total contract amount for the time that you are occupying your apartment. Which is from August 18th, 2022 - July 31st, 2023. This contract calue is broken into 12 equal isntallments. You are paying the first installments which is due August 1st.</p>
+                    </div>
+                </div>
+                <div class="quest" id="question2">
+                    <a class="quest-page" href="#question2">Can I move-in before August 18th?
+                    <ion-icon class="arrow" name="caret-down-outline"></ion-icon>
+                    </a>
+                    <div class="quest-body">
+                        <p>We are in preparation to make sure that your move-in day goes as smooth as possible. At this time, we are unable to allow expections for an early move-in.</p>
+                    </div>
+                </div>
+                <div class="quest" id="question3">
+                    <a class="quest-page" href="#question3">What if I don't like my matched roomates?
+                    <ion-icon class="arrow" name="caret-down-outline"></ion-icon>
+                    </a>
+                    <div class="quest-body">
+                        <p>We have spent several months to complete our roommate matching process and have gone to great lengths to match you with the best candidate available for you. We ask that you keep an open mind and take some time to get to know your roommates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <img class="hour" src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c4967bef349350cf6093d2_office%20hours.png" alt="Office Hours">
+    <div class="socialMedia" style="background-color:#1B4D34">
+        <a href="https://mobile.twitter.com/live_ntx">
+            <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c49963660520174f6ba053_2021%20Twitter%20logo%20-%20white.png" alt="Twitter" width="50">
+        <a href="https://www.facebook.com/LiveNTX">
+            <img src=https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c49b30dbdbc82619012cc6_f_logo_RGB-White_1024.png alt="Facebook" width="50">
+        <a href="https://www.instagram.com/live_ntx/?hl=en">  
+            <img src="https://uploads-ssl.webflow.com/62c47c019849a9df68477123/62c4a10966052005fb6bfaae_Instagram_Glyph_White.png" alt="Instagram" width="50">;
+    </div>
+</footer>
+</html>
