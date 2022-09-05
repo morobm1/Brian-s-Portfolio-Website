@@ -4,6 +4,7 @@
     background-color: blueviolet;
     text-decoration: none;
     font-family: 'Fira Sans', sans-serif;
+    
 
 }
 
@@ -16,6 +17,7 @@ a{
     background-color: white;
 }
 .container {
+    margin-left: 150px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
 }
