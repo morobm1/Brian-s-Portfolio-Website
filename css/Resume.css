@@ -10,10 +10,30 @@ html, body {
     min-height: 100vh;
 }
 
-.tabs {
-    margin: auto;
-    padding: auto;
-    text-align:center;
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+nav {
+    padding-top: 50px;
+    flex: 1;
+    text-align: right;
+    background-color: white;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    background-color: white;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: white;
 }
 
 .container {
