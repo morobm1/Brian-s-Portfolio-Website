@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+.tabs {
+    background-color: white;
+    text-align: center;
+}
+
+a{
+    background-color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+}
+
+.placeholder {
+    position: relative;
+    top: 100px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(46, 50, 54, 0.473);
+    transition: 0.5s;
+
+}
+
+.placeholder:hover{
+    top: 85px;
+}
+
+.card {
+    max-height: 150px;
+    margin-left: 55px;
+    border-radius: 20px;
+}
+
+
+h4{   
+    text-align: center;
+    background-color: white;
+}
+
+p {
+    margin-bottom: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.source {
+    margin-left: 65px;
+    margin-top: 80px;
+    padding: 15px;
+    border-radius: 60px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px rgba(46, 50, 54, 0.473)
+}
