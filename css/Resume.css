@@ -38,15 +38,23 @@ nav ul li {
 
 .container {
     margin: auto;
-    padding: auto;
+    padding-left: 25px;
+    padding-right: 25px;
     max-width: 1080px;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
+.resume_row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .resume {
     width: 75%;
+    
 }
 
 .download_options{
