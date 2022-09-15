@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: rgb(83, 170, 211);
+}
+
+.container{
+width: 400px;
+max-height: 500px;
+margin: 1rem;
+padding: 2rem;
+box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+border-radius: 16px;
+background-color: white;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.formTitle{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formE{
+    text-align: center;;
+    color: red;
+}
+
+
+.formInput{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid #b4e4f0;
+    border-radius: 5px;
+    outline: none;
+    background: #b4e4f0;
+
+}
+
+.formInput:focus{
+    border-color: blue;
+    background-color: white;
+}
+
+.submitButton{
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(81, 207, 230);
+    font-size: 20px;
+    transition: 0.5s;
+    
+}
+
+.submitButton:hover{
+    background: rgb(28, 157, 180);
+}
+
+.formLink {
+    
+    text-decoration: none;
+    cursor: pointer;
+    color: red;
+}
+
+.formLink:hover {
+    text-decoration: underline;
+}
+
+.formInputErrorMessage {
+    color: red;
+    font-size: 10px;
+}

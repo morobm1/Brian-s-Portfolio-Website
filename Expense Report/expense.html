@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./expense.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>Expense Tracking</title>
+</head>
+<body>
+    <header>Expense tracker</header>
+    
+    <form>
+        <h4>Company</h4> 
+            <input class="companyname" type="text" required>
+
+        <h4>Date:</h4>
+            <input class="purchaseDate" type="date" required>
+        <h4>Amount</h4>
+            <input class="amountEnter" type="number" required>
+
+            <button class="submitButton">Submit</button>
+    </form>
+
+    <div class="expenseContainer">
+        <table class="expenseTable">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr class="item">
+                <td class="name"></td>
+                <td class="date"></td>
+                <td class="amount"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script src="./expense.js"></script>
+</body>
+</html>

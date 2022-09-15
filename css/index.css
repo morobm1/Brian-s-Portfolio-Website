@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(43, 9, 75);
 
 }
 
@@ -33,4 +34,30 @@ nav ul li {
     display: inline-block;
     margin-right: 20px;
     background-color: white;
+}
+
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.headshot {
+    margin-right: 25px;
+    width: 300px;
+    border: 10px solid yellow;
+    border-radius: 300px;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.skill_divider{
+    height: 350px;
+    background-color: white;
+
 }
