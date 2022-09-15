@@ -40,16 +40,15 @@ nav ul li a{
 
 
 .container {
-    min-width: 100vw;
     min-height: 100vh;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 25px;
-    margin: auto;
+    margin: 0;
     display: grid;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 }
 
 
@@ -119,7 +118,7 @@ footer {
     background-color: black;
     color: white;
     text-align: right;
-    width: 100vw;
+    width: 100%;
     padding-top: 10px;
 }
 
