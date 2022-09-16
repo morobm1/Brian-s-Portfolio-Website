@@ -116,6 +116,11 @@ form button:hover {
     }
 
     .todo{
+        font-size: 0.75rem;
+    }
+
+    .completed-btn, .delete-btn {
+        border-radius: 0.4rem;
         font-size: 0.5rem;
     }
 }
