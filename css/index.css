@@ -30,7 +30,6 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
     text-decoration: none;
 }
 
@@ -50,9 +49,11 @@ nav ul li {
 .skillDivider{
     padding-bottom: 1rem;
     padding-top: 1rem;
+    margin: 0;
     width: auto;
     background-color: blanchedalmond;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .langIcon{
@@ -69,7 +70,6 @@ nav ul li {
     height: 100%;
     padding-left: 0;
     float: right;
-    height: 100%;
 }
 
 .bigLogo {
@@ -100,7 +100,7 @@ img#BLogo {
     color: black;
 }
 
-@media (max-width: 395px) {
+@media (max-width: 390px) {
     body {
         width: 100vw;
     }
@@ -108,9 +108,24 @@ img#BLogo {
     .skillDivider{
         padding-bottom: 1rem;
         padding-top: 1rem;
-        width: auto;
+        width: 100%;
         height: 100%;
         display: block;
+        background-color: blanchedalmond;
     }
 
+    .descHolder{
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        height: 100%;
+    }
+
+
+    .langIcon{
+        height: 100%;
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+    }
 }
