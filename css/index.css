@@ -109,6 +109,22 @@ div {
     text-align: center;
 }
 
+.projectContainers{
+    display: grid;
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(415px, 0.5fr));
+}
+
+.project {
+    padding-bottom: 1rem;
+}
+
+.prjecticon{
+width: 50%;
+float: left;
+}
+
 @media (max-width: 400px) {
     body {
         width: 100vw;
