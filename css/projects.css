@@ -41,14 +41,12 @@ nav ul li a{
 
 .container {
     min-height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 25%;
     padding-bottom: 25px;
-    margin: 0;
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(390px, 0.5fr));
 }
 
 
@@ -129,6 +127,9 @@ footer ul{
 
 }
 
+div {
+    text-align: center;
+}
 
 footer ul li {
     font-style: italic;
