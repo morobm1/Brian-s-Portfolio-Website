@@ -4,12 +4,12 @@
     Class instagram_basic_display_api {
         private $_appId = INSTAGRAM_APP_ID;
         private $_appSecret = INSTAGRAM_APP_SECRET;
-        private $_redirectUrl = INSTRAGRAM_APP_REDIRECT_URI;
-    
-        function __contruction( $params) {
+        private $_redirectUrl = INSTAGRAM_APP_REDIRECT_URI;
+
+        function __construct( $params) {
 
             //save instram code
-            $this->getCode = $param['get_code'];
+            $this->getCode = $params['get_code'];
 
             //get access token
 
@@ -27,7 +27,7 @@
             );
             
             //create URL
-            $this->_setAuthorizationUrl = $this->_apiBaseUrl . oauth/authorize? . http_build_query($getVars);
+            $this->_setAuthorizationUrl = $this->_apiBaseUrl . 'oauth/authorize?' . http_build_query($getVars);
       
         }
 
