@@ -8,15 +8,18 @@
         private $_redirectUrl = INSTAGRAM_APP_REDIRECT_URI;
         private $_getCode = '';
         private $_apiBaseUrl = 'https://api.instagram.com/';
-        private $_userAccessToken = "";
+        private $_graphBasedUrl = 'https://graph.instagram.com/';
+        private $_userAccessToken = '';
+        private $_userAccessTokenExpires = '';
         
         public $authorizationUrl = "";
         public $hasUserAccessToken = false;
+        public $userId = '';
 
         function __construct( $params) {
 
             //save instram code
-            $this->getCode = $params['get_code'];
+            $this->_getCode = $params['get_code'];
 
             //get access token
 
@@ -27,8 +30,13 @@
             $this->_setAuthorizationUrl(); 
         }
 
-        private function getUserAccessToken() {
+        public function getUserAccessToken() {
             return $this->_userAccessToken;
+        }
+
+        
+        public function getUserAccessTokenExpires() {
+            return $this->_userAccessTokenExpires;
         }
         
         private function _setAuthorizationUrl() {
@@ -43,10 +51,20 @@
             $this->authorizationUrl = $this->_apiBaseUrl . 'oauth/authorize?' . http_build_query( $getVars );
         }
         private function _setUserInstagramAccessToken ($params) {
-            if ($params['get_code']) {
+            if ($params['access_token']) {
+                $this->_userAccessToken = $params['access_token'];
+                $this->hasUserAccessToken = true;
+                $this->userId = $params['user_id'];
+            }
+            elseif ($params['get_code']) {
                 $userAccessTokenResponse = $this->_getUserAccessToken();
                 $this->_userAccessToken = $userAccessTokenResponse['access_token'];
                 $this->hasUserAccessToken = true;
+                $this->userId = $userAccessTokenResponse['user_id'];
+
+                $longLivedAccessTokenResponse = $this->_getLongLivedUserAccessToken();
+                $this->_userAccessToken = $longLivedAccessTokenResponse['access_token'];
+                $this->_userAccessTokenExpires = $longLivedAccessTokenResponse['expires_in'];
             }
         }
             private function _getUserAccessToken() {
@@ -65,6 +83,52 @@
                     return $response;
             }
 
+            private function _getLongLivedUserAccessToken() {
+                $params = array(
+                    'endpoint_url' => $this->_graphBasedUrl . 'access_token',
+                    'type' => 'GET',
+                    'url_params' => array(
+                        'client_secret' => $this->_appSecret,
+                        'grant_type' => 'ig_exhage_token',
+                        )
+                    );
+
+                    $response = $this->_makeApiCall($params);
+                    return $response;
+            }
+
+            public function getUsersMedia () {
+                $params = array(
+                    'endpoint_url' => $this->_graphBasedUrl . $this->userId. '/media',
+                    'type' => 'GET',
+                    'url_params' => array(
+                        'fields' => 'caption,media_url,timestamp',
+                        )
+
+                    );
+
+                    $response = $this->_makeApiCall($params);
+                    return $response;
+            }
+
+
+            public function getUser () {
+                $params = array(
+                    'endpoint_url' => $this->_graphBasedUrl . 'me',
+                    'type' => 'GET',
+                    'url_params' => array(
+                        'fields' => 'id,username,media_count,account_type',
+                        )
+
+                    );
+
+                    $response = $this->_makeApiCall($params);
+                    return $response;
+            }
+
+
+            
+
             private function _makeApiCall($params) {
                 $ch = curl_init();
 
@@ -73,6 +137,10 @@
                 if ('POST' == $params['type']) {
                     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params['url_params']));
                     curl_setopt($ch, CURLOPT_POST, 1);
+                } elseif('GET' == $params['type']) {
+                    $params['url_params']['access_token'] = $this->_userAccessToken;
+
+                    $endpoint .= '?' . http_build_query($params['url_params']);
                 }
 
                 curl_setopt($ch, CURLOPT_URL, $endpoint);
