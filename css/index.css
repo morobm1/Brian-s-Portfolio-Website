@@ -35,5 +35,13 @@
 
   .container {
     padding-bottom: 5px;
+    padding-top: 10px;
+  }
+
+  #contact-us {
+    margin-top: 10px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 2rem;
   }
 
