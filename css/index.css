@@ -14,7 +14,7 @@ input::placeholder {
 }
 
 #top-me{
-    margin: 10px 0;
+    margin: px 0;
 }
 #about-row {
     margin-right: 0;
@@ -50,7 +50,6 @@ input::placeholder {
   }
 
   #contact-us {
-    margin-top: 10px;
     background-color: black;
     color: whitesmoke;
     padding: 2rem;
