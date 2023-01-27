@@ -99,7 +99,7 @@ h3#button1 {
 }
 
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 575px) {
      .imgButton img{
         height: 90px;
     }
