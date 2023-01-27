@@ -1,0 +1,135 @@
+
+#navbarMain {
+    padding-left: 3rem;
+}
+
+#welcomeTitle{
+    font-family: 'Kalam', cursive; 
+}
+
+#welcomeText{
+    margin-left: 25px;
+}
+
+#welcomeButton {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+#navLogo {
+    width: 18%;
+}
+
+#navgroup{
+    margin-top: 5px;
+}
+
+#funcationButtons {
+padding-top: 2rem;
+}
+
+#topIntro {
+    color: white;
+    
+}
+
+#mainContainer{
+    background-image: url(/Avatar/Avatar-legends/images/Aang-Banner.PNG);
+    background-repeat: no-repeat;
+}
+.buttonTitle {
+margin-top: -50px;
+}
+
+h3#button1 {
+    text-align: left;
+    font-size: 20px;
+    margin-top: -60px;
+}
+
+
+.imgButton {
+    font-family: 'Kalam', cursive;
+}
+
+#newfeed {
+    margin-top: 55px;
+    margin-bottom: 10px;
+    width: 55%;
+}
+
+
+
+
+.card-img-top {
+    height: 150px;
+}
+
+.bigNews {
+    height: 200px;
+}
+
+.cardNews {
+    margin: 10px;
+
+}
+
+.loginIcons {
+    width: 300px;
+    margin-bottom: -18px;
+    z-index: 0;
+}
+
+
+.loginText {
+    margin-top: -50px;
+    color: white;
+    font-family: 'Kalam', cursive;
+    font-size: 50px;
+}
+
+#footer {
+    color: white;
+}
+
+#footerLogo {
+    width: 250px;
+}
+
+
+  @media screen and (max-width: 390px) {
+     .imgButton img{
+        height: 90px;
+    }
+
+    .imgButton h3{
+        font-size: 18px;
+        margin-top: -32px;
+    }
+
+    .imgButton h3#button1{
+        font-size: 14px;
+        margin-top: -38px;
+    }
+
+    .col#filler1 {
+        visibility: hidden;
+    }
+
+    .col-5#topIntro {
+        width: 100vw;
+        padding-right: 25px;
+    }
+    
+    #homeplayerHolder {
+        margin-top: 10px;
+        padding-right: 25px;
+    }
+    iframe#homeplayer {
+        width: 100vw;  
+        height: 200px;
+        margin-left: -45px;     
+    }
+  }
