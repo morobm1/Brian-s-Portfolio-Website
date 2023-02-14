@@ -1,21 +1,18 @@
-import Universal from './techniques.json'
+function TechniqueList ({universal}) {
+  return(
+      <div className="list">
+        <h5>Title:{universal.title}</h5>
+        <h8>Approach:{universal.approach}</h8>
+        <h9>Description:{universal.desc}</h9>
+        <button>Test</button>
+      </div>
+    )
 
-const techinqueToggler = document.querySelector(".togglerTech");
 
-let test = Universal;
-
-var techinqueTitle = "";
-var approach = "";
-var desc = "";
-techinqueToggler.addEventListener("click", displayTech);
-
-function displayTech() {
-    var tilteCard = '<div class="containter-fluid">' +
-    '<h2>Title</h2>' +
-    '<p>Approach</p>';
-
-  document.getElementById("techList").innerHTML = tilteCard;
 }
+
+export default TechniqueList;
+
 
 
 

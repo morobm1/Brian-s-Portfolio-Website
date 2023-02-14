@@ -1,0 +1,1 @@
+ReactDOM.render(<TechniqueList />, document.querySelector('#techList'));
