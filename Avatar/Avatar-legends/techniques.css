@@ -24,3 +24,18 @@ body {
     bottom: 0;
     width: 100%;
   }
+
+
+  /* Set the height of the footer for desktop */
+@media (min-width: 768px) {
+  footer {
+    height: 200px;
+  }
+}
+
+/* Set the height of the footer for mobile */
+@media (max-width: 767px) {
+  footer {
+    height: 200px;
+  }
+}
