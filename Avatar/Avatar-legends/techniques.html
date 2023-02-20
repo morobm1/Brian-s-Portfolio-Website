@@ -49,48 +49,44 @@
             </button>
         </div>
     </nav>
+            
+    <div class="container-fluid" style="color: white; max-height: 300px;">
+        <div class="row" id="descontiner">
 
-<div class="container-fluid">
-    <div class="row" style="height: 100vh;">
-        <div class="col" style="background-image:url(./images/element\ blue\ background.png); background-size: contain; background-repeat: no-repeat;">
-
-            <div class="container-fluid" style="color: white;">
-                <div class="row">
-                    <div class="col bg-dark overflow-auto" style="height:100vh" id="techList">
-                        <!--<div>
-                            <h2>Attack Weakness</h2>
-                            <p>advance & attack</p>
-                        </div>-->
-                    </div>
-                    <div class="col">
-                        <div class="row">
-
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/universal.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">universal</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/earthbending.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">earth bending</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/firebending.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">fire bending</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/airbending.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">air bending</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/waterbending.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">water bending</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/technology.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">technology</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/group.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">GROUP</div>
-                                <div class="col togglerTech" style="background-image: url(./images/techLogos/weapons.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">WEAPONS</div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col bg-secondary descTech">
-                                <div id="techdisplay_container">HI</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-2" id="toggler">
+                <div class="d-flex flex-column">
+                  <button class="btn btn-secondary my-2" id="allB">SHOW ALL</button>
+                  <button class="btn btn-secondary my-2" id="waterB">WaterBending</button>
+                  <button class="btn btn-secondary my-2" id="earthB">EarthBending</button>
+                  <button class="btn btn-secondary my-2" id="fireB">FireBending</button>
+                  <button class="btn btn-secondary my-2" id="airB">AirBending</button>
+                  <button class="btn btn-secondary my-2" id="groupB">Group</button>
+                  <button class="btn btn-secondary my-2" id="techB">Technology</button>
+                  <button class="btn btn-secondary my-2" id="weaponsB">Weapons</button>
+                  <button class="btn btn-secondary my-2" id="universalB">Universal</button>
                 </div>
+              </div>
+              
+
+        <div class="col" id="scrollList">
+            <div class="row">
+                <div class="col-12 bg-dark" style="height:100vh" id="universalList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="groupList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="waterList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="earthList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="fireList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="airList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="weaponsList"></div>
+                <div class="col-12 bg-dark" style="height:100vh" id="technologyList"></div>        
             </div>
         </div>
     </div>
-</div>
+
 
 
 
 <!--Footer-->
-<footer class="bd-footer py-4 py-md-5 bg-dark">
+<footer class="bd-footer py-4 py-md-3 bg-dark">
     <div class="container-fluid" id="footer">
         <div class="row">
             <div class="col text-end">
@@ -146,11 +142,30 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel" src="techniques.js"></script>
-    <script type="text/babel" src="techList.js"></script>
+    <script type="text/babel" src="./components/UniversalList.js"></script>
+    <script type="text/babel" src="./components/WaterbendingList.js"></script>
+    <script type="text/babel" src="./components/EarthbendingList.js"></script>
+    <script type="text/babel" src="./components/FirebendingList.js"></script>
+    <script type="text/babel" src="./components/AirbendingList.js"></script>
+    <script type="text/babel" src="./components/GroupList.js"></script>
+    <script type="text/babel" src="./components/WeaponList.js"></script>
+    <script type="text/babel" src="./components/TechnologyList.js"></script>
+
+
 
     <script type="text/babel">
-        ReactDOM.render(<TechList />, document.querySelector('#techList'));
+        ReactDOM.render(<UniversalList />, document.querySelector('#universalList'));
+        ReactDOM.render(<WaterList />, document.querySelector('#waterList'));
+        ReactDOM.render(<GroupList />, document.querySelector('#groupList'));
+        ReactDOM.render(<EarthList />, document.querySelector('#earthList'));
+        ReactDOM.render(<FireList />, document.querySelector('#fireList'));
+        ReactDOM.render(<AirList />, document.querySelector('#airList'));
+        ReactDOM.render(<WeaponsList />, document.querySelector('#weaponsList'));
+        ReactDOM.render(<TechnologyList />, document.querySelector('#technologyList'));
+        
     </script>
+
+
 
 </body>
 </html>

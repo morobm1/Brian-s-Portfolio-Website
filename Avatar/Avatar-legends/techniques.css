@@ -1,8 +1,26 @@
-.togglerTech {
-
-    width: 100px;
+html, body {
+    height: 100%;
+  }
+  
+body {
+    overflow: hidden;
 }
 
-.descTech {
-    height: 100vh;
+#descontiner{
+    max-height: 650px;
 }
+
+#toggler{
+    max-height: 500px;
+}
+
+#scrollList {
+    overflow: auto;
+
+  }
+  
+  .bd-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
